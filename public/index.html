@@ -2,11 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReadMe</title>
     <link rel="stylesheet"  href="css/style.css">
-    <link rel="stylesheet"  href="css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script type="text/javascript" src="../public/js/jquery-3.2.1.js"></script>
   </head>
   <body>
     <div class="header">
@@ -14,6 +16,7 @@
         <img src="image\Logo_small.png" alt="TAMILA">
       </div>
       <div class="header__nav">
+        <span id="header__nav--menu" class=" header__nav--item ">Menu</span>
         <a href="#Home" class="header__nav--item">Home</a>
         <a href="#Services" class="header__nav--item">Services</a>
         <a href="#About me" class="header__nav--item">About me</a>
@@ -70,13 +73,13 @@
         </div>
       </div>
       <div class="content__biography" id="About me">
-        <div class="content__biography--button ">
+        <div class="content__biography--button">
           <h3>Do you want to find out who I am?</h3>
-          <input type="button" name="biography" value="I want!">
+          <input type="button" name="biography" id="button" value="I want!" onclick="showBiography()" >
         </div>
-        <div class="content__biography--info">
+        <div id="biography--info" class="content__biography--info">
           <div class="content__biography--image">
-            <img src="image\biography.png" alt="European flag">
+            <img src="image\biography.png" alt="Photo">
           </div>
           <div class="content__biography--text">
             <h2>About me</h2>
@@ -121,7 +124,7 @@
         </div>
       </div>
       <div class="content__contact" id="Contact">
-        <form action="URL">
+        <form  method="URL">
           <h3>Tell me more about your project, and I’ll
             send you a free estimate within 6 hours:</h3>
           <div class="content__contact--form">
@@ -170,9 +173,7 @@
       </div>
     </div>
 
-    <script src="less.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-
+    <script src="js/main.js"></script>
   </body>
 </html>
