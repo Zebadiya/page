@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadMe</title>
+    <title>Translations you can trust</title>
     <link rel="stylesheet"  href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -15,15 +15,18 @@
       <div class="header__logo">
         <img src="image\Logo_small.png" alt="TAMILA">
       </div>
-      <div class="header__nav">
-        <span id="header__nav--menu" class=" header__nav--item ">Menu</span>
-        <a href="#Home" class="header__nav--item">Home</a>
-        <a href="#Services" class="header__nav--item">Services</a>
-        <a href="#About me" class="header__nav--item">About me</a>
-        <a href="#Coments" class="header__nav--item">Coments</a>
-        <a href="#Contact" class="header__nav--item">Contact</a>
-        <span class="header__nav--item">+33(65)210 91 48</span>
+      <div id="nav-btn" class="header__nav--icon">
+        <div id="nav-container" class="header__nav closed">
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#About me">About me</a></li>
+            <li><a href="#Coments">Coments</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
+      <span class="header__number">+33(65)210 91 48</span>
     </div>
     <div class="header__slide" id="Home">
       <img src="image\Translations_you_can_trust.png" alt="Translations you can trust">
@@ -130,11 +133,11 @@
           <div class="content__contact--form">
             <div class="content__contact--left">
               <p>Enter your name:
-              <input class="form-string" type="text" size="40"  placeholder="Anna"/></p>
+              <input class="form-string" type="text" size="36"  placeholder="Anna"/></p>
               <p>What is your Email?
-              <input class="form-string" type="text" size="40"  placeholder="email@gmail.com"/></p>
+              <input class="form-string" type="text" size="36"  placeholder="email@gmail.com"/></p>
               <p>Please, enter your phone:
-              <input class="form-string" type="text" size="40"  placeholder="+33(65)210 91 48"/></p>
+              <input class="form-string" type="text" size="36"  placeholder="+33(65)210 91 48"/></p>
               <div class="content__contact--checkbox">
                 <p>What service do you interesting?</p>
                 <label><input type="checkbox" name="" value="Translation">Translation</label>
@@ -144,7 +147,7 @@
             </div>
             <div class="content__contact--right">
               <p>More about your project:</p>
-              <textarea class="form-string" type="comment"  cols="40" rows="7" placeholder="Hi! I want to tell you abuot my unbelievable project, so..."></textarea><br>
+              <textarea class="form-string" type="comment"  cols="36" rows="7" placeholder="Hi! I want to tell you abuot my unbelievable project, so..."></textarea><br>
               <label><input type="checkbox" name="" value="Emergency">It`s an emergency!</label>
             </div>
           </div>

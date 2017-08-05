@@ -4,17 +4,21 @@ console.log('Hi! I`m working');
 
 // Реaкция на нажатие кнопки I want
 
-var element = document.getElementById('biography--info');
+var elemBiogr = document.getElementById('biography--info'),
+    elemBtn = document.getElementById('button');
 
-element.style.display = 'none';
+elemBiogr.style.display = 'none';
 
 function showBiography(id) {
-  if (element.style.display == "none") {
-    element.style.display = 'flex';
-    document.getElementById('button').value = "Hide!";
+  if (elemBiogr.style.display == "none" && document.body.clientWidth < 426) {
+    elemBiogr.style.display = 'block';
+    elemBtn.value = "Hide!";
+  } else if (elemBiogr.style.display == "none") {
+    elemBiogr.style.display = 'flex';
+    elemBtn.value = "Hide!";
   } else {
-    element.style.display = "none";
-    document.getElementById('button').value = "I want!";
+    elemBiogr.style.display = "none";
+    elemBtn.value = "I want!";
   }
 }
 
@@ -22,28 +26,57 @@ function showBiography(id) {
 
 // изменение вида меню навигации для малых размеров
 
+
+
+var navBtn = document.getElementById('nav-btn'),
+    navContainer = document.getElementById('nav-container');
+
+var navClosed = "header__nav closed",
+    navOpen = "header__nav open";
+
+function checkVersion() {
+  if (document.body.clientWidth < 426) {
+    console.log('???')
+    navBtn.onclick = function() {
+      console.log('openNav working')
+      if (navContainer.className == navClosed) {
+        console.log('Navigation opened');
+        navContainer.className = navOpen;
+        event.stopPropagation();
+      } else if (navContainer.className == navOpen) {
+        console.log('Navigation closed');
+        navContainer.className = navClosed;
+        event.stopPropagation();
+      }
+    }
+
+  } else {}
+}
+
+checkVersion();
 // function my_func() {
-//   var MinWidth = document.
-//   offsetWidth,
-//       browserMinWidth = parseInt($('head').offsetWidth('body'), 10);
+//   var minWidth = document.body.clientWidth;
 //   console.log('It`s working');
-//   console.log('MinWidth',MinWidth);
-//   console.log('browserMinWidth',browserMinWidth);
-//     if (browserMinWidth < 426) {
-//       var menu = document.getElementById('header__nav--menu'),
-//           item = document.getElementsByClassName('header__nav--item');
-//           console.log('menu',menu);
-//           console.log('item',item);
-//       menu.click(function() {
-//         for (let i=1; i< item.length; i++) {
-//           item[i].addClass("header__nav--open");
-//           item[i].toggleClass("header__nav--item");
-//           console.log('after', menu);
-//           console.log('after', item);
-//         }
-//       });
+//   console.log('MinWidth',minWidth);
+//     if (minWidth < 426) {
+//
+//
 //     }
 //   }
+
+// var menu = document.getElementById('header__nav--menu'),
+//     item = document.getElementsByClassName('header__nav--item');
+// console.log('menu',menu);
+// console.log('item',item);
+// function addMenu() {
+//   for (let i=1; i < item.length + 1; i++) {
+//     item[i].classList.add('header__nav--open');
+//     item[i].classList.remove('header__nav--item');
+//
+//     console.log('after', menu);
+//     console.log('after', item);
+//   }
+// };
 
 // $(document).ready(function() {
 //   return my_func();
